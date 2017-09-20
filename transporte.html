@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visual Analytics 2017 - 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	
+	<style>
+
+
+
+
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+  </head>
+
+  <body>
+	
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" >Transporte Aero y Terrestre en Colombia</a>
+        
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>¿Las aerolineas de bajo costo han tenido un impacto real en el Transporte de pasajeros?</h1>
+              <h2 class="subheading">Analisis de del transporte en Colombia desde 2005 a 2015</h2>
+              <span class="meta">Posted by
+                <a >David Gomez</a>
+                19 de Septiembre de 2017</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Distribución de medios de Transporte</h2>
+            <p>En el análisis inicial sobre los datos se intentó identificar la distribución de pasajeros entre 
+              los dos medios de transporte en los principales municipios de Colombia (aquellos que cuentan con aeropuertos) para 
+              determinar el tendencias y participación de los medios de transporte.
+            </p>
+
+      <svg width="600" height="600" id="stacked_barchart"></svg>
+      
+      <p>Utilizando la visualización podemos ver que el transporte terrestre es domínate, sin embargo, 
+        se observa una tendencia de crecimiento del transporte aéreo, el cual ha aumentado la participación 
+        del mercado de forma significativa desde el año 2009 lo que vamos a profundizar más Adelante.
+        </p>
+      
+        <h2 class="section-heading">Tendencias en el volumen de pasajeros</h2>
+        <p>Adicional al análisis de distribución de medios de transporte, se pretende determinar si el volumen de 
+          pasajeros presenta alguna tendencia durante el año que puedan afectar las comparaciones de información y a 
+          la vez determinar los picos de que se puedan presentar durante el año.
+          </p>
+        <svg width="600" height="600" id="lineChartComparativo"></svg>
+        <p>Observando la gráfica podemos ver que las tendencias se mantienen durante los años, en 
+          donde se observan picos muy marcados en los meses de diciembre y enero, 
+          básicamente por las fiestas de fin de año, y en los meses de junio y julio, 
+          por los periodos de vacaciones escolares y temporadas de fiestas regionales del país.
+          </p>
+          <h2 class="section-heading">Análisis de Crecimiento del transporte Aereo</h2>
+
+          <p>Con el fin de ahondar en el análisis de crecimiento del transporte aéreo y con el 
+            fin de determinar si efectivamente hay un impacto real de las aerolíneas de bajo costo 
+            en la dinámica del sector se planteó el siguiente análisis:
+            </p>
+            <p>•	Se va a realizar un análisis de crecimiento de los medios de transporte en comparativa con el año inmediatamente anterior.
+              </p>
+              <p>•	Se incluirá la información de crecimiento demográfico para tener un valor de referencia para comparar los valores de crecimiento de los medios de transporte
+              </p>
+      <svg width="600" height="600" id="lineChartCrecimiento"></svg>
+
+      <p>Al observar la visualización podemos determinar que le transporte aéreo tuvo una tasa de crecimiento elevada 
+        entre los años 2009 y 2013, realizando verificaciones se encontró que Viva Colombia entro en operaciones en el 
+        año 2009 lo que pudo impactar en el crecimiento del sector no solo por la cantidad de pasajeros transportados, 
+        sino por el efecto que originó en el mercado haciendo que las aerolíneas bajaran sus costos haciendo el viaje 
+        aéreo más atractivo frente al viaje terrestre.
+        </p>
+
+        <h2 class="section-heading">Fuente de Datos</h2>
+
+        <p>Para el análisis realizado se utilizaron las siguientes fuentes de datos:</p>
+
+        <p>Transporte Aéreo: https://www.datos.gov.co/Comercio-Industria-y-Turismo/Pasajeros-Aereos-Nacionales/idmw-pexi
+          </p>
+
+          <p>Transporte Terrestre: https://www.datos.gov.co/Comercio-Industria-y-Turismo/Pasajeros-Terminales-Terrestres/dbaw-dquh
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/leo-gome/transporteColombia">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+
+
+
+
+    
+  </body>
+  
+<!-- Codigo para generar Stacked Barchart -->
+<script>
+    //Selecccion del SVG y definicion de margenes
+    var svg = d3.select("#stacked_barchart"),
+        margin = {top: 120, right: 120, bottom: 30, left: 40},
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom,
+        g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    //Definicion de escalas de la visualizacion
+    var x = d3.scaleBand()
+        .rangeRound([0, width])
+        .paddingInner(0.05)
+        .align(0.1);
+    
+    var y = d3.scaleLinear()
+        .rangeRound([height, 0]);
+    
+    var z = d3.scaleOrdinal()
+        .range(["orange", "tomato"]);
+    //Cargar Informacion
+    d3.csv("data1.csv", function(d, i, columns) {
+      for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+      d.total = t;
+      return d;
+    }, function(error, data) {
+      if (error) throw error;
+    
+      var keys = data.columns.slice(1);
+    
+      //Definicion del dominio de las escalas
+      x.domain(data.map(function(d) { return d.Year; }));
+      y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+      z.domain(keys);
+    
+      g.append("g")
+        .selectAll("g")
+        .data(d3.stack().keys(keys)(data))
+        .enter().append("g")
+          .attr("fill", function(d) { return z(d.key); })
+        .selectAll("rect")
+        .data(function(d) { return d; })
+        .enter().append("rect")
+          .attr("x", function(d) { return x(d.data.Year); })
+          .attr("y", function(d) { return y(d[1]); })
+          .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+          .attr("width", x.bandwidth());
+    
+      //Adicion de los elementos de la visualizacion
+      g.append("g")
+          .attr("class", "axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+    
+      g.append("g")
+          .attr("class", "axis")
+          .call(d3.axisLeft(y).ticks(null, "s"))
+        .append("text")
+          .attr("x", 2)
+          .attr("y", y(y.ticks().pop()) + 0.5)
+          .attr("dy", "0.32em")
+          .attr("fill", "#000")
+          .attr("font-weight", "bold")
+          .attr("text-anchor", "start")
+          .text("Pasajeros");
+    
+      var legend = g.append("g")
+          .attr("font-family", "sans-serif")
+          .attr("font-size", 10)
+          .attr("text-anchor", "end")
+        .selectAll("g")
+        .data(keys.slice().reverse())
+        .enter().append("g")
+          .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    
+      legend.append("rect")
+          .attr("x", width + 105)
+          .attr("width", 19)
+          .attr("height", 19)
+          .attr("fill", z);
+    
+      legend.append("text")
+          .attr("x", width + 95)
+          .attr("y", 9.5)
+          .attr("dy", "0.32em")
+          .text(function(d) { return d; });
+    });
+    
+    </script>
+
+
+<!-- Codigo para generar Line Chart Comparativo -->
+
+<script>
+    
+    //Seleccion del SVG para generar la visualizacion y definicion de margener
+    var svg2 = d3.select("#lineChartComparativo"),
+        margin2 = {top: 20, right: 50, bottom: 30, left: 60},
+        width2 = svg2.attr("width") - margin2.left - margin2.right,
+        height2 = svg2.attr("height") - margin2.top - margin2.bottom,
+        g2 = svg2.append("g").attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+    
+    
+    // definicion de las escalas para la visualizacion
+    var x2 = d3.scaleBand().range([0, width2]),
+        y2 = d3.scaleLinear().range([height2, 0]),
+        z2 = d3.scaleOrdinal(d3.schemeCategory10);
+    
+    //definicion de la funcion para realizar las lineas entre los diferentes puntos
+    var line2 = d3.line()
+        .curve(d3.curveBasis)
+        .x(function(d) { return x2(d.date); })
+        .y(function(d) { return y2(d.pasajeros); });
+    
+    //carga de la informacion
+    d3.csv("data2.csv", function(error2, data2) {
+      if (error2) throw error2;
+      
+      //Seleccion de las diferentes series de datos que se tendran en la visualizacion
+      var years2 = data2.columns.slice(1).map(function(id) {
+        return {
+          id: id,
+          values: data2.map(function(d) {
+            return {date: d.date, pasajeros: d[id]};
+          })
+        };
+      });
+      
+
+      //Definicion de los rangos de las escalas
+      x2.domain(data2.map(function(d) { return d.date; }));
+      
+      y2.domain([
+        500000,
+        5000000
+      ]);
+    
+      z2.domain(years2.map(function(c) { return c.id; }));
+    
+      //inclusion de los elementos de la visualizacion
+      g2.append("g")
+          .attr("class", "axis axis--x")
+          .attr("transform", "translate(0," + height2 + ")")
+          .call(d3.axisBottom(x2));
+    
+      g2.append("g")
+          .attr("class", "axis axis--y")
+          .call(d3.axisLeft(y2))
+        .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", "0.71em")
+          .attr("fill", "#000")
+          .text("Cantidad de Pasajeros");
+    
+      var year = g2.selectAll(".year")
+        .data(years2)
+        .enter().append("g")
+          .attr("class", "year");
+    
+      year.append("path")
+          .attr("class", "line")
+          .attr("d", function(d) { return line2(d.values); })
+          .style("stroke", function(d) { return z2(d.id); });
+    
+      year.append("text")
+          .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+          .attr("transform", function(d) { return "translate(" + x2(d.value.date) + "," + y2(d.value.pasajeros) + ")"; })
+          .attr("x", 3)
+          .attr("dy", "0.35em")
+          .style("font", "10px sans-serif")
+          .text(function(d) { return d.id; });
+    });
+    //Funcion para retornar las diferentes series el grafico
+    function type(d, _, columns) {
+      //d.date = parseTime(d.date);
+      for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+      return d;
+    }
+    
+    </script>
+
+
+
+
+
+<!-- Codigo para generar LineChart de Crecimiento-->
+
+<script>
+//Seleccion del SVG para incluir la grafica
+var svg3 = d3.select("#lineChartCrecimiento"),
+    margin3 = {top: 20, right: 100, bottom: 30, left: 50},
+    width3 = svg3.attr("width") - margin3.left - margin3.right,
+    height3 = svg3.attr("height") - margin3.top - margin3.bottom,
+    g3 = svg3.append("g").attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+
+
+//Definicion de las escalas a utilizar
+var x3 = d3.scaleLinear().range([0, width3]),
+    y3 = d3.scaleLinear().range([height3, 0]),
+    z3 = d3.scaleOrdinal(d3.schemeCategory10);
+//Definicion de la funcion para realizar las lineas entre los puntos
+var line = d3.line()
+    .curve(d3.curveBasis)
+    .x(function(d) { return x3(d.date); })
+    .y(function(d) { return y3(d.crecimiento); });
+
+//Cargar la informacion
+d3.csv("data3.csv", function(error3, data3) {
+  if (error3) throw error3;
+  //Seleccion de las diferentes series de la visualzacion
+  var conceptos = data3.columns.slice(1).map(function(id) {
+    return {
+      id: id,
+      values: data3.map(function(d) {
+        return {date: d.date, crecimiento: d[id]};
+      })
+    };
+  });
+  
+  //Definicion de los dominios de las escalas
+  x3.domain(d3.extent(data3, function(d) { return d.date; }));
+
+  y3.domain([
+    d3.min(conceptos, function(c) { return d3.min(c.values, function(d) { return d.crecimiento; }); }),
+    d3.max(conceptos, function(c) { return d3.max(c.values, function(d) { return d.crecimiento; }); })
+  ]);
+
+  z3.domain(conceptos.map(function(c) { return c.id; }));
+
+  //Inclusion de los elementos del grafico
+  g3.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height3 + ")")
+      .call(d3.axisBottom(x3));
+
+  g3.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y3))
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", "0.71em")
+      .attr("fill", "#000")
+      .text("Tasa de Crecimiento");
+
+  var concepto = g3.selectAll(".concepto")
+    .data(conceptos)
+    .enter().append("g")
+      .attr("class", "concepto");
+
+  concepto.append("path")
+      .attr("class", "line")
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return z3(d.id); });
+
+  concepto.append("text")
+      .datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+      .attr("transform", function(d) { return "translate(" + x3(d.value.date) + "," + y3(d.value.crecimiento) + ")"; })
+      .attr("x", 3)
+      .attr("dy", "0.35em")
+      .style("font", "10px sans-serif")
+      .text(function(d) { return d.id; });
+});
+//Funcion para retornar las diferentes series el grafico
+function type(d, _, columns) {
+  
+  for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+  return d;
+}
+
+</script>
+	
+
+</html>
